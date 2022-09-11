@@ -60,7 +60,7 @@ void loop()
     String strname = file.name();
     // If it is not a directory and filename ends in .jpg then load it
     if (!file.isDirectory() && strname.endsWith(".jpg")) {
-      loadFile(strname.c_str());
+      loadFile(("/"+strname).c_str());
     }
   }
   M5.update();
